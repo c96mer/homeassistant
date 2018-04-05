@@ -1,0 +1,9 @@
+
+weather:
+  name: "Vädret"
+  entities:
+    - sensor.vadret_temperature
+    - sensor.vadret_symbol
+    - sensor.vadret_precipitation
+    - sensor.vadret_wind_speed
+    - sun.sun

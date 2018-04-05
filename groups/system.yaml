@@ -1,0 +1,10 @@
+#
+# Local system
+#
+system:
+  name: System
+  entities:
+    - sensor.ram_used
+    - sensor.cpu_used
+    - sensor.disk_used
+    - sensor.swap_used

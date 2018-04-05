@@ -1,0 +1,9 @@
+#
+# Checking Internet Speed
+#
+connection:
+  name: Internet
+  entities:
+    - sensor.speedtest_download
+    - sensor.speedtest_ping
+    - sensor.speedtest_upload

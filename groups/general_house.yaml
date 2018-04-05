@@ -1,0 +1,11 @@
+general_house:
+  name: Hemma
+  entities:
+    - alarm_control_panel.sector_alarm_02562793
+    - sensor.temperatur
+#    - sensor.skymning
+    - device_tracker.5848228be7de
+    - device_tracker.7c019155dd92
+    - device_tracker.volvo_naa834
+    - media_player.kd65x8509c
+    - media_player.KodiOnSony

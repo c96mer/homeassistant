@@ -1,0 +1,9 @@
+#
+# KNX Light
+#
+#  - platform: knx
+#    name: Trappa
+#    address: '2/3/7'
+#    state_address: '2/3/6'
+#    brightness_address: '2/3/5'
+#    brightness_state_address: '2/3/4'

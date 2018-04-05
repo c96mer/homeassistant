@@ -1,0 +1,34 @@
+- id: arrive_dark_alarmed_id
+  alias: Turn on light when Magnus or Kate arrive after sunset -2h and armed
+  trigger:
+  - platform: state
+    entity_id: device_tracker.5848228be7de
+    from: 'not_home'
+    to: 'home'
+  - platform: state
+    entity_id: device_tracker.7c019155dd92
+    from: 'not_home'
+    to: 'home'
+  condition:
+  - condition: state
+    entity_id: alarm_control_panel.sector_alarm_02562793
+    state: 'armed_away'
+  - condition: sun
+    after: sunset
+    after_offset: '-2:00:00'
+  action:
+  - service: switch.turn_on
+    entity_id: switch.tvattstuga  
+- id: lights_off_when_armed_id
+  alias: Arming switch off lights
+  trigger:
+  - platform: state
+    entity_id: alarm_control_panel.sector_alarm_02562793
+    from: 'disarmed'
+    to: 'armed_away'
+  condition: []
+  action:
+  - service: switch.turn_off
+    entity_id: group.lights_downstairs
+  - service: switch.turn_off
+    entity_id: group.lights_upstairs

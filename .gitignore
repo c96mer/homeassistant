@@ -1,0 +1,15 @@
+*
+!*.yaml
+!scenes
+!automations
+!groups
+!sensors
+!switches
+!lights                
+!tts
+!deps
+!notifications
+!custom_components
+!.gitignore
+secrets.yaml
+known_devices.yaml

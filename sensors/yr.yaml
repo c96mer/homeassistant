@@ -1,0 +1,16 @@
+#
+# Weather prediction
+#
+  - platform: yr
+    name: "Vädret"
+    forecast: 1
+    monitored_conditions:
+      - temperature
+      - symbol
+      - precipitation
+      - windSpeed
+      - pressure
+      - windDirection
+      - humidity
+      - fog
+      - cloudiness

@@ -1,0 +1,12 @@
+#
+# KNX Sensor
+#
+  - platform: knx
+    name: Temperatur
+    address: '3/0/4'
+    type: 'temperature'
+    
+  - platform: knx
+    name: Skymning
+    address: '3/0/0'
+    type: 'percent'

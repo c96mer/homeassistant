@@ -1,0 +1,16 @@
+
+lights_downstairs:
+  name: Lampor nere
+  entities:
+    - switch.overskap_i_kok
+    - switch.kok__tak
+    - switch.koks__o
+# These are externally dimmed lights
+#    - switch.fonsterlampor
+#    - switch.matbord
+#    - switch.vardagsrum__tak
+    - switch.toalett__dusch
+    - switch.toalett__spegel
+    - switch.toalett__tak
+    - switch.toalett__utanfor
+    - switch.tvattstuga

@@ -1,0 +1,136 @@
+# Nedervåning
+  - platform: knx
+    name: "Överskåp i kök"
+    address: '2/0/1'
+    state_address: '2/0/0'
+    
+  - platform: knx
+    name: "Köks - ö"
+    address: '2/0/4'
+    state_address: '2/0/3'
+    
+  - platform: knx
+    name: "Kök - tak"
+    address: '2/0/7'
+    state_address: '2/0/6'
+    
+#  - platform: knx
+#    name: "Matbord"
+#    address: '2/0/9'
+#    state_address: '2/0/8'
+ 
+# KNX Dimmer, to be supported 
+#  - platform: knx
+#    name: "Fönsterlampor"
+#    address: '2/4/11'
+#    state_address: '2/4/10'
+
+# KNX Dimmer, to be supported    
+#  - platform: knx
+#    name: "Vardagsrum - tak"
+#    address: '2/4/16'
+#    state_address: 2/4/15'
+    
+  - platform: knx
+    name: "Toalett - Dusch"
+    address: '2/0/17'
+    state_address: '2/0/16'
+    
+  - platform: knx
+    name: "Toalett - Spegel"
+    address: '2/1/1'
+    state_address: '2/1/0'
+    
+  - platform: knx
+    name: "Toalett - Tak"
+    address: '2/1/3'
+    state_address: '2/1/2'
+    
+  - platform: knx
+    name: "Toalett - Utanför"
+    address: '2/1/5'
+    state_address: '2/1/4'
+    
+  - platform: knx
+    name: "Tvättstuga"
+    address: '2/1/13'
+    state_address: '2/1/12'
+# Övervåning
+  - platform: knx
+    name: "Trappa"
+    address: '2/3/7'
+    state_address: '2/3/6'
+
+  - platform: knx
+    name: "Hallampa"
+    address: '2/2/7'
+    state_address: '2/2/6'
+
+  - platform: knx
+    name: "Alexander tak"
+    address: '2/1/15'
+    state_address: '2/1/14'
+    
+  - platform: knx
+    name: "K&M - tak"
+    address: '2/2/1'
+    state_address: '2/2/0'
+    
+  - platform: knx
+    name: "Emilie - tak"
+    address: '2/2/9'
+    state_address: '2/2/8'
+    
+  - platform: knx
+    name: "Allrum - fönster"
+    address: '2/2/3'
+    state_address: '2/2/2'
+
+# KNX Dimmer, to be supported    
+#  - platform: knx
+#    name: "Allrum - tak"
+#    address: '2/2/5'
+#    state_address: '2/2/4'
+    
+  - platform: knx
+    name: "Bad - Spegel"
+    address: '2/2/11'
+    state_address: '2/2/10'
+
+  - platform: knx
+    name: "Bad - tak"
+    address: '2/2/13'
+    state_address: '2/2/12'
+
+  - platform: knx
+    name: "Arbetsrum"
+    address: '2/2/15'
+    state_address: '2/2/14'
+# Ute
+  - platform: knx
+    name: "Altan"
+    address: '2/0/11'
+    state_address: '2/0/10'
+    
+  - platform: knx
+    name: "Entré"
+    address: '2/1/7'
+    state_address: '2/1/6'
+    
+  - platform: knx
+    name: "Carport"
+    address: '2/1/11'
+    state_address: '2/1/10'
+
+# Övrigt
+#  - platform: knx
+#    name: "Allt sovrum"
+#    address: '3/0/1'
+    
+#  - platform: knx
+#    name: "Allt entré"
+#    address: '3/0/5'
+    
+  - platform: knx
+    name: "Skymning"
+    address: '3/0/2'

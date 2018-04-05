@@ -1,0 +1,14 @@
+lights_upstairs:
+  name: Lampor uppe
+  entities:
+    - switch.hallampa
+    - switch.trappa
+    - switch.alexander_tak
+    - switch.emilie__tak
+    - switch.km__tak
+    - switch.allrum__fonster
+# externally dimmed
+#    - switch.allrum__tak
+    - switch.bad__spegel
+    - switch.bad__tak
+    - switch.arbetsrum

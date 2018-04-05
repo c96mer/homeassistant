@@ -1,0 +1,7 @@
+
+lights_outside:
+  name: Lampor ute
+  entities:
+    - switch.entre
+    - switch.carport
+    - switch.altan

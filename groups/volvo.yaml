@@ -1,0 +1,9 @@
+volvo:
+  name: "Volvo On Call"
+  entities:
+    - sensor.naa834_odometer
+    - sensor.naa834_fuel_amount
+    - sensor.naa834_range
+    - binary_sensor.naa834_doors
+    - switch.naa834_heater
+    - device_tracker.volvo_naa834

@@ -1,0 +1,22 @@
+# Turn light on when arrive, it's dark and the alarm is on.
+- alias: 'Turn on light in tvattstuga when Magnus or Kate arrive after sunset -2h and alarm is armed'
+  trigger:
+    # Magnus or Kate coming home
+    platform: state
+    entity_id: device_tracker.5848228be7de, device_tracker.7c019155dd92
+    from: 'not_home'
+    to: 'home'
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: alarm_control_panel.sector_alarm_02562793
+        state: 'armed_away'
+      - condition: sun
+        after: sunset
+        # Optional offset value
+        after_offset: "-2:00:00"
+  action:
+    service: switch.turn_on
+    entity_id: switch.tvattstuga
+ 
