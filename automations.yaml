@@ -1,5 +1,5 @@
 - id: arrive_dark_alarmed_id
-  alias: Turn on light when Magnus or Kate arrive after sunset -2h and armed
+  alias: Turn on light when Magnus or Kate arrive when dark and alarm is set
   trigger:
   - platform: state
     entity_id: device_tracker.5848228be7de
@@ -11,7 +11,7 @@
     to: 'home'
   condition:
   - condition: state
-    entity_id: alarm_control_panel.sector_alarm_02562793
+    entity_id: sensor.sector_alarm
     state: 'armed_away'
   - condition: sun
     after: sunset
@@ -19,11 +19,11 @@
   action:
   - service: switch.turn_on
     entity_id: switch.tvattstuga  
-- id: lights_off_when_armed_id
-  alias: Arming switch off lights
+- id: armed_alarm_id
+  alias: Arming switch off lights and hvac
   trigger:
   - platform: state
-    entity_id: alarm_control_panel.sector_alarm_02562793
+    entity_id: sensor.sector_alarm
     from: 'disarmed'
     to: 'armed_away'
   condition: []
@@ -32,3 +32,16 @@
     entity_id: group.lights_downstairs
   - service: switch.turn_off
     entity_id: group.lights_upstairs
+  - service: switch.turn_on
+    entity_id: switch.ftx__lag_drift
+- id: disarmed_alarm_id
+  alias: Disarming turn hvac away mode off
+  trigger:
+  - platform: state
+    entity_id: sensor.sector_alarm
+    from: 'armed_away'
+    to: 'disarmed'
+  condition: []
+  action:
+  - service: switch.turn_off
+    entity_id: switch.ftx__lag_drift

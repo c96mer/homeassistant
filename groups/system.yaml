@@ -4,7 +4,7 @@
 system:
   name: System
   entities:
-    - sensor.ram_used
-    - sensor.cpu_used
-    - sensor.disk_used
-    - sensor.swap_used
+    - sensor.memory_use_percent
+    - sensor.processor_use
+    - sensor.disk_use_percent_
+    - sensor.swap_use_percent

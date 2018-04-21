@@ -34,9 +34,10 @@ config:
 http:
   # Secrets are defined in the file secrets.yaml
   api_password: !secret http_password
-  # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
-  # base_url: example.duckdns.org:8123
-
+  ssl_certificate: /ssl/cert.pem
+  ssl_key: /ssl/privkey.pem
+  base_url: https://tallbacken33.mooo.com
+  
 # Checks for available updates
 # Note: This component will send some information about your system to
 # the developers to assist with development of Home Assistant.
@@ -71,6 +72,10 @@ knx:
 #  - platform: knx
 #    name: "Kök vardagsrum"
 #    temperature_address: '0/0/2'
+#binary_sensor:
+#  - platform: knx
+#    name: "Släck allt / sovrum"
+#    address: '3/0/1'
 
 sensor: !include_dir_merge_list sensors/
 
@@ -84,25 +89,38 @@ tts:
 # Cloud - currently only for US
 #cloud:
 
-#media_player Sony:
+#media_player:
 #  - platform: braviatv
 #    host: 192.168.0.103
-
-media_player KodiOnSony:
-  - platform: kodi
-    host: 192.168.0.103
+#  - platform: songpal
+#    name: HT-NT3
+#    endpoint: http://192.168.0.105:10000/sony
+#  - platform: kodi
+#    host: 192.168.0.103
 
 device_tracker:
   - platform: nmap_tracker
     hosts: 192.168.0.0/24
-      
-sector_alarm:
-  email: !secret sectoralarm_email
-  password: !secret sectoralarm_pwd
-  alarm_id: !secret sectoralarm_alrm
-  code: !secret sectoralarm_code
-  thermometers: false
-  alarm_panel: true
+    home_interval: 10
+    exclude:
+      - 192.168.0.100
+      - 192.168.0.101
+      - 192.168.0.103
+      - 192.168.0.104
+      - 192.168.0.108
+      - 192.168.0.111
+      - 192.168.0.112
+      - 192.168.0.115
+      - 192.168.0.117
+      - 192.168.0.188
+
+#sector_alarm:
+#  email: !secret sectoralarm_email
+#  password: !secret sectoralarm_pwd
+#  alarm_id: !secret sectoralarm_alrm
+#  code: !secret sectoralarm_code
+#  thermometers: false
+#  alarm_panel: true
 
 volvooncall:
   username: !secret volvo_usr
