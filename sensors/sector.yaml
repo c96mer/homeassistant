@@ -1,0 +1,4 @@
+  - platform: sectoralarm
+    email: !secret sectoralarm_email
+    password: !secret sectoralarm_pwd
+    site_id: !secret sectoralarm_alrm

@@ -1,0 +1,5 @@
+hvac:
+  name: Ventilation
+  entities:
+    - switch.ftx__borta
+    - switch.ftx__lag_drift
