@@ -1,0 +1,12 @@
+# sensor:
+  - platform: synologydsm
+    host: 192.168.0.112
+    username: !secret synologydsm_usr
+    password: !secret synologydsm_pwd
+    monitored_conditions:
+      - cpu_total_load
+      - memory_real_usage
+      - disk_smart_status
+      - volume_size_used
+      - volume_percentage_used
+      - volume_disk_temp_avg

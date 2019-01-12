@@ -1,0 +1,6 @@
+myzwave:
+  name: z-wave
+  entities:
+    - switch.motorv
+    - sensor.motorv_power
+    - sensor.motorv_power_2

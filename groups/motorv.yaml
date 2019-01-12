@@ -1,0 +1,4 @@
+motorv:
+  name: Motorvärmare
+  entities:
+    - switch.motorvarmare
